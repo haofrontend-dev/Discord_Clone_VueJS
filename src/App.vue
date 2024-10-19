@@ -1,10 +1,10 @@
 <script setup lang="ts"></script>
 
 <template>
-    <div>App</div>
+    <div>App 123 23</div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 div {
     display: block;
 }

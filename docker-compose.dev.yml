@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  app:
+    container_name: discord-ui
+    image: discord-ui
+    build:
+      context: .
+      dockerfile: ./docker/dev/Dockerfile.dev
+      target: development
+    ports:
+      - "5177:${PORT}"
+    env_file:
+      - .env
+    volumes:
+      - type: bind
+        source: ./index.html
+        target: /app/index.html
+      - type: bind
+        source: ./src
+        target: /app/src
+    networks:
+      - discord-networks-docker
+networks:
+  discord-networks-docker:
+    external: true
