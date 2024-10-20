@@ -13,5 +13,15 @@ export default [
             'vue/html-indent': ['error', 4],
             'vue/script-indent': ['error', 4],
         },
+        parser: 'babel-eslint',
+        parserOptions: {
+            ecmaVersion: 6,
+            sourceType: 'module',
+            ecmaFeatures: {
+                jsx: true,
+                modules: true,
+                experimentalObjectRestSpread: true,
+            },
+        },
     },
 ]
