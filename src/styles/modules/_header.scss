@@ -1,0 +1,30 @@
+.app-header {
+    background-color: $primary-color;
+    height: $height-header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0;
+
+    .header-nav {
+        .header-nav-list {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            .header-nav-item {
+                a {
+                    color: $white-color;
+                    text-decoration: none;
+                    font-size: $primary-font-size;
+                    font-weight: 600;
+                    transition: all 0.2s;
+
+                    &:hover {
+                        color: $secondary-color;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
