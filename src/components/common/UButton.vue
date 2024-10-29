@@ -6,7 +6,6 @@
             `u-button__${variant}`,
             `u-button__${color}`,
             `u-button__${size}`,
-            props.class,
         ]"
         :disabled="disabled || loading"
     >
@@ -20,14 +19,12 @@
 </template>
 
 <script setup lang="ts">
-import { type ButtonHTMLAttributes } from 'vue'
-
 type Variants = 'primary' | 'secondary'
 type Size = 'xs' | 'sm' | 'md' | 'lg'
 type Color = 'white' | 'black' | 'gray' | 'primary' | 'secondary'
 
 /* @vue-ignore */
-interface Props extends ButtonHTMLAttributes {
+type Props = {
     disabled?: boolean
     loading?: boolean
     variant?: Variants
@@ -35,15 +32,13 @@ interface Props extends ButtonHTMLAttributes {
     color?: Color
 }
 
-const props = withDefaults(defineProps<Props>(), {
+withDefaults(defineProps<Props>(), {
+    disabled: false,
+    loading: false,
     variant: 'primary',
     size: 'md',
-    loading: false,
-    disabled: false,
-    color: 'white',
+    color: 'primary',
 })
-
-console.log(props)
 </script>
 
 <style scoped></style>

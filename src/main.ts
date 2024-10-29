@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import App from './App.vue'
 import '@/styles/index.scss'
+import '@/assets/css/tailwind.css'
 import { router } from '@/router'
 import { registerComponents } from './components'
 

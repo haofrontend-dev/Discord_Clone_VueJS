@@ -1,0 +1,33 @@
+.form-login {
+    background-color: $gray-color-main;
+    @apply py-9 px-8;
+
+    .form-title {
+        font-size: 25px;
+    }
+    .form-description {
+        font-size: 15px;
+        color: $gray-color-text;
+        @apply mb-5;
+    }
+
+    .form-content {
+        @apply mb-5 mt-6;
+
+        .form-item {
+            @apply flex flex-col gap-2;
+
+            .form-label {
+                color: $label-color;
+                font-size: 15px;
+                @apply uppercase flex gap-2 items-center;
+            }
+
+            .form-input {
+                @apply h-10 w-full outline-none border-none p-2.5;
+                color: $gray-color-text;
+                background-color: $color-background-input;
+            }
+        }
+    }
+}

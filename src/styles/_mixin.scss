@@ -6,3 +6,13 @@
         max-width: 100%;
     }
 }
+
+.text-required {
+    color: $red-color-required;
+}
+
+.text-link {
+    color: $color-text-link;
+    font-size: 13px;
+    line-height: 1.2;
+}

@@ -24,7 +24,7 @@ export const routes: Readonly<RouteRecordRaw[]> = [
         },
     },
     {
-        path: '/auth',
+        path: '/login',
         name: ROUTE_NAMES.LOGIN,
         component: () => import('@/views/auth/LoginView.vue'),
         meta: {

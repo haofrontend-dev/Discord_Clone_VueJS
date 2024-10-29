@@ -18,6 +18,15 @@ services:
       - type: bind
         source: ./src
         target: /app/src
+      - type: bind
+        source: ./tailwind.config.js
+        target: /app/tailwind.config.js
+      - type: bind
+        source: ./package.json
+        target: /app/package.json
+      - type: bind
+        source: ./vite.config.ts
+        target: /app/vite.config.ts
     networks:
       - discord-networks-docker
 networks:
